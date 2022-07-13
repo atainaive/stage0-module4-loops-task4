@@ -9,16 +9,17 @@ public class TwoRangesSum {
         } else if (lastInRow < 0) {
             System.out.println("last number in row is negative");
         } else {
-            for (int i = 0; i < lastInRow; i++) {
+            for (int i = 0; i <= lastInRow; i++) {
                 if (i <= numberToSkip) {
                     skippedSum = skippedSum + i;
                     continue;
                 }
                 actualSum = actualSum + i;
             }
+
+            System.out.println("skipped sum is " + skippedSum);
+            System.out.println("counted sum is " + actualSum);
         }
 
-        System.out.println("skipped sum is " + skippedSum);
-        System.out.println("counted sum is " + actualSum);
     }
 }
